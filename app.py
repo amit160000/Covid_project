@@ -10,7 +10,7 @@ df = pd.DataFrame()
 @app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET'])
 def predict():
     global df
     input_features = [int(x) for x in request.form.values()]
